@@ -91,7 +91,7 @@ model_file_path = os.environ.get("MODEL_FILE_PATH", "./model.h5")
 def cartoonize(load_folder, save_folder, model_path):
     print("c2")
     model = tf.keras.models.load_model(
-        "https://drive.google.com/file/d/1Ok_DCMRe8CT0EOdwRrU6kCOHleyMCEBx/view?usp=drive_link",
+        "./model.h5",
         custom_objects={"iou": iou, "dice_coef": dice_coef, "dice_loss": dice_loss},
     )
     print("c3")
