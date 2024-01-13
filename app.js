@@ -64,6 +64,7 @@ function handleUpload(req, res) {
     } else {
       console.log("callname " + req.file.filename);
       var spawn = require("child_process").spawn;
+      console.log("checkpoint");
       var responseData = {};
 
       var process = spawn("python3", ["./Generate.py", req.file.filename]);
